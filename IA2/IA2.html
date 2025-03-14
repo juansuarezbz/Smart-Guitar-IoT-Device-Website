@@ -1,0 +1,91 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        
+        <title> IA2 Product  </title>
+
+        <!--CSS here-->
+        <style>
+            .container-product{
+                background-color:darkolivegreen;
+                padding: 20px;
+            }
+            .container-product .product{
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border:solid 5px black;
+            }
+            .container-product .btn{
+                width: 400px;
+                background-color:aquamarine;
+                color:black;
+                font-size: 30px;
+            }
+            .container-product h2{
+                font-size: 30px;
+                color: cadetblue;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+            }
+            .container-product p{
+                font-size: 25px;
+                color:azure;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight:lighter;
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+       <div class="container-product text-center">
+            <div class="row">
+                <!-- Left Column-->
+                <div class="col-sm-8">
+                    <button onclick="showme()" class=" btn btn-success">Show information</button>
+                    <div id="mydiv" style="display:none">
+                    <h2> JS Tech</h2>
+                    <p> Great presntation everytime</p>
+                </div>
+
+
+                </div>
+
+                <!--Right column-->
+                <div class="col-sm-4">
+                    
+                    <img class="product" src="images/guitar.png"></img>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+    
+    
+     
+
+        <!--javascript here-->
+
+        <Script>
+            function showme(){
+                 var x = document.getElementById("mydiv");
+                  if (x.style.display==="none"){
+                      x.style.display="block";
+                 }else {
+                     x.style.display="none";
+                 }
+            }
+        </Script>
+        
+    </body>
+
+</html>

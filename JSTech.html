@@ -1,0 +1,886 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        
+        <title> JS Tech  </title>
+
+        <style>
+
+            /*IA9 Nav  */
+            .navbar{
+                background-color: darkcyan;
+                font-size: 30px;
+                padding: 10px;
+                opacity: .8;
+            }
+            li a{
+                color: antiquewhite;
+                padding: 10px;
+                text-decoration: none;
+            }
+            li a:hover{
+                color: darksalmon;
+                background-color: cadetblue;
+                border-radius: 10%;
+                transition: 1.2s;
+                padding: 15px;
+            }
+            .navbar-brand{
+                color: lemonchiffon;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 30px;
+                font-weight: lighter;
+            }
+            .navbar-brand:hover{
+                color: darksalmon;
+                background-color: cadetblue;
+                border-radius: 10%;
+                transition: 1.2s;
+                padding: 15px;
+            }
+
+            /* IA1 Company */
+            .container-company{
+                background-color: rgb(41, 136, 128);
+                height: 500px;
+                padding-top: 100px;
+            }
+            .container-company h2{
+                font-size: 80px;
+                color: azure;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                padding: 20px;
+                text-shadow: 5px 5px 5px black;
+            }
+            .container-company p{
+                font-size: 40px;
+                color: burlywood;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                padding: 10px;
+            }
+            .container-company button{
+                font-size: 30px;
+                color: cornsilk;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                background-color: darkslategrey;
+                width: 250px;
+            }
+
+            /* IA2 Product */
+            .container-product{
+                background-color:darkolivegreen;
+                padding: 20px;
+                padding-top: 100px;
+            }
+            .container-product .product{
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border:solid 5px black;
+            }
+            .container-product .btn{
+                width: 400px;
+                background-color:aquamarine;
+                color:black;
+                font-size: 30px;
+            }
+            .container-product h2{
+                font-size: 30px;
+                color: cadetblue;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+            }
+            .container-product p{
+                font-size: 25px;
+                color:azure;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight:lighter;
+            }
+
+            /* IA3 */
+            .container-team img{
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: solid 10px black;
+                margin: 20px;
+                
+            }
+            .container-team {
+                background-color: lightcyan;
+                padding: 30px;
+                padding-top: 100px;
+            }
+            .panel{
+                background-color: darkolivegreen;
+                padding: 20px;
+                margin: 20px;
+            }
+            .panel:hover{
+                background-color: olive;
+                box-shadow: 5px 5px 5px black;
+                transition: 1.5s;
+            }
+            .container-team h2{
+                color: coral;
+                font-size: 50px;
+                font-family: monospace;
+                font-weight: bolder;
+                font-style: italic;
+            }
+            .container-team h3{
+                font-size: 30px;
+                color: rgb(115, 21, 21);
+                font-weight: bold;
+            }
+            a{
+                text-decoration: none;
+            }
+            .container-team p{
+                font-size: 25px;
+                color: rgb(110, 37, 37);
+                font-weight: bold;
+            }
+
+            /* IA4 */
+            .container-features{
+                background-color: darkseagreen;
+                padding: 35px;
+                padding-top: 100px;
+            }
+            .container-features h2{
+                font-size: 50px;
+                color: aliceblue;
+                font-family:'Courier New', Courier, monospace ;
+                font-weight: bolder;
+                margin: 8px;
+            }
+            .search{
+                width: 70%;
+                display: block;
+                /* Center Search Bar */
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 30px;
+                color:darkslategrey ;
+                font-style: italic;
+                background-color:lavender ;
+                border: 3px solid black;
+                margin-bottom: 30px;
+            }
+            table, th, td{
+                border: 2px solid black;
+                height: 70px;
+                padding: 10px;
+            }
+            th{
+                background-color: darksalmon;
+                color:darkslategrey ;
+                font-size: 25px;
+                text-align: center;
+            }
+            td{
+                font-size: 25px;
+
+                color:dimgrey ;
+                text-align: center;
+            }
+            tr:hover{
+                background-color:darkblue ;
+                transition: 1.5s; 
+            }
+            td:hover{
+                color:aliceblue;
+            }
+
+            /* IA5 */
+            .slide-picture{
+                width: 100%;
+                height: 400px;
+            }
+            .container-smart h2{
+                background-color: dimgrey;
+                color:mintcream;
+                font-size: 30px;
+                opacity: 0.8;
+                margin-bottom: 20px;
+                
+            }
+            .carousel-control-prev-icon{
+                background-color: gray;
+                width: 50px;
+                height: 50px;
+            }
+            .carousel-control-next-icon{
+                background-color: gray;
+                width: 50px;
+                height: 50px;
+            }
+            .carousel-indicators [data-bs-target]{
+                background-color:aqua ;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+
+            /* IA6 */
+            .customer{
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                border: 5px solid black;
+            }
+            .container-customer{
+                background-color:darkgrey ;
+                padding: 30px;
+                padding-top: 100px;
+            }
+            .container-customer h2{
+                font-size: 45px;
+                color: darkgreen;
+                font-weight: bold;
+                font-family: fantasy;
+                padding: 20px;
+            }
+            .nav-link{
+                color: crimson;
+                font-size: 25px;
+                font-weight: bold;font-family: 'Times New Roman', Times, serif;
+            }
+            .nav-tabs .nav-link{
+                background-color: burlywood;
+                border: none;
+            }
+            .nav-tabs .nav-link.active{
+                color:floralwhite;
+                background-color: darkorchid;
+            }
+            .container-customer h3{
+                font-size: 30px;
+                color: coral;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 10px;
+            }
+            .container-customer p{
+                font-size: 15px;
+                color:darkgoldenrod;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 10px;
+            }
+
+            /* IA7*/
+            .order{
+                width: 150px;
+                height: 300px;
+                border-radius: 50%;
+                border: solid 5px brown;
+
+            }
+            .container-order{
+                padding: 40px;
+                background-color: aquamarine;
+                padding-top: 100px;
+
+            }
+            .container-order h2{
+                font-size: 40px;
+                color: dimgray;
+                font-weight: bolder;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            }
+            .container-order p{
+                font-size: 28px;
+                color: cadetblue;
+                font-weight: bold;
+
+            }
+            .container-order button{
+                font-size: 20px;
+                color: darkgreen;
+                background-color: burlywood;
+                
+            }
+            .modal-content{
+                background-color: darkseagreen;
+                font-size: 25px;
+                color: black;
+                width: 600px;
+            }
+            .modal-dialog{
+                width: 600px;
+            }
+            .modal-footer button{
+                color: aliceblue;
+                font-size: 30px;
+                font-weight: bold;
+                background-color:darkslateblue;
+                width: 100%;
+            }
+
+            /* IA8 */
+            .container-contact{
+                background-color: lightgreen;
+                padding: 20px;
+            }
+            .container-contact h2{
+                font-size: 50px;
+                color: white;
+                font-weight: bolder;
+                margin: 20px;
+            }
+            .container-contact h3{
+                font-size: 30px;
+                color: white;
+                font-weight: bold;
+            }
+            .container-contact p{
+                font-size: 20px;
+                color: gray;
+                font-weight: bold;
+            }
+            .container-contact input{
+                margin: 10px;
+                font-size: 30px;
+                color: coral;
+            }
+            .container-contact textarea{
+                margin: 10px;
+                font-size: 20px;
+                color: coral;
+            }
+            .container-contact .btn-primary{
+                width: 100%;
+                margin: 10px;
+                font-size: 30px;
+                background-color:cornflowerblue ;
+            }
+            .container-contact2{
+                font-family: 'Times New Roman', Times, serif;
+                padding-left: 150px;
+                background-color: aliceblue;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <!-- IA9 Nav -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" href="#"> JS Tech </a>
+            <!-- Small Screen -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#button">
+                <spam class="navbar-toggler-icon"></spam>
+
+            </button>
+
+            <!-- Large Screen -->
+            <div class="collapse navbar-collapse" id="button">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about"> About </a>
+                    </li>
+                    <li>
+                        <a href="#product"> Product </a>
+                    </li>
+                    <li>
+                        <a href="#team"> Team </a>
+                    </li>
+                    <li>
+                        <a href="#features"> Features </a>
+                    </li>
+                    <li>
+                        <a href="#smart"> Smart </a>
+                    </li>
+                    <li>
+                        <a href="#testimonials"> Testimonials </a>
+                    </li>
+                    <li>
+                        <a href="#order"> Order </a>
+                    </li>
+                    <li>
+                        <a href="#contact"> Contact </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- IA1 Company -->
+        <!--Create a container for company (html)-->
+        <div class="container-company text-center" id="about">
+            <h2> J S Tech  </h2>
+            <p> Smart Guitar  </p>
+            <button onclick="myEmail()"  >Email</button>
+
+        </div>
+
+        <!-- JavaScript here-->
+        <script> 
+            function myEmail() {
+                alert("jsuarez12345@csudh.edu");
+            }
+        
+        </script>
+
+        <!-- IA2 product -->
+        <div class="container-product text-center" id="product">
+            <div class="row">
+                <!-- Left Column-->
+                <div class="col-sm-8">
+                    <button onclick="showme()" class=" btn btn-success">Show information</button>
+                    <div id="mydiv" style="display:none">
+                    <h2> JS Tech</h2>
+                    <p> Great presntation everytime</p>
+                </div>
+
+
+                </div>
+
+                <!--Right column-->
+                <div class="col-sm-4">
+                    
+                    <img class="product" src="images/guitar.png"></img>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+    
+    
+     
+
+        <!--javascript here-->
+
+        <Script>
+            function showme(){
+                 var x = document.getElementById("mydiv");
+                  if (x.style.display==="none"){
+                      x.style.display="block";
+                 }else {
+                     x.style.display="none";
+                 }
+            }
+        </Script>
+
+        <!-- IA3 -->
+        <div class="container-team text-center" id="team">
+
+            <div class="row">
+
+                <h2> About JS Tech</h2>
+                <!--First col-->
+                <div class="col-sm-4">
+                    
+                    <a href="https://www.csudh.edu/" target="_blank">
+                        <div class="panel">
+                            <h3> CEO </h3>
+                            <img src="images/member1.jpg">
+                            <p> Chad </p>
+                        </div>
+                    </a>
+
+                </div>
+                <!--Second col-->
+                <div class="col-sm-4">
+                    
+                    <a href="https://www.nintendo.co.uk/Misc-/Professor-E-Gadd-s-Research-Journal/Journal-overview/03-The-Birth-of-Gooigi-1509154.html" target="_blank">
+                        <div class="panel">
+                            <h3> CTO </h3>
+                            <img src="images/member2.jpg">
+                            <p> Gooigi </p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!--Third col-->
+                <div class="col-sm-4">
+                    
+                    <a href="https://www.imdb.com/name/nm0695435/?ref_=ttfc_fc_cl_t1" target="_blank">
+                        <div class="panel">
+                            <h3> CMO </h3>
+                            <img src="images/member3.jpg">
+                            <p> Chris Pratt </p>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- IA4 -->
+        <div class="container-features text-center" id="features">
+
+            <div class="row">
+
+                <h2> J S Tech Smart Guitar  </h2>
+                <input id="mysearch" type="text" class="search" placeholder="Search...">
+                <!-- Table Here -->
+                <table>
+                    <!-- Table Head -->
+                    <thead>
+                        <tr>
+                            <th> Items  </th>
+                            <th> Features  </th>
+                            <th> Descrpition  </th>
+
+                        </tr>
+                    </thead>
+                    <!-- Table Body -->
+                    <tbody id="mytable">
+                        <!-- Body Row 1 -->
+                        <tr>
+                            <td> 1  </td>
+                            <td> Visual Cords  </td>
+                            <td> Visual cords on the side of the guitar to easily learn songs  </td>
+
+                        </tr>
+                        <!-- Body Row 2 -->
+                        <tr>
+                            <td> 2  </td>
+                            <td> LED Lights  </td>
+                            <td> LED lights that is displayed on the neck to match the song  </td>
+
+                        </tr>
+                        <!-- Body Row 3 -->
+                        <tr>
+                            <td> 3  </td>
+                            <td> Bluethooth Speaker  </td>
+                            <td> Bluethooth speaker that can conect to any device and output audio  </td>
+
+                        </tr>
+                        
+
+
+                    </tbody>
+                        <!-- JS Here -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                        
+                        <script>
+                            $(document).ready(function(){
+                            $("#mysearch").on("keyup", function() {
+                                var value = $(this).val().toLowerCase();
+                                $("#mytable tr").filter(function() {
+                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                            });
+                            </script>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- IA5 -->
+        <div class="container-smart text-center" id="smart">
+            <div class="row">
+                <div class="carousel slide" id="slideshow" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Component 1 Items -->
+                            <!-- Item 1 -->
+                            <div class="carousel-item active">
+                                <img class="slide-picture" src="images/feature1.jpg">
+                                <div class="carousel-caption">
+                                    <h2> Arthritis Sensor </h2>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="carousel-item">
+                                <img class="slide-picture" src="images/feature2.jpg">
+                                <div class="carousel-caption">
+                                    <h2> Light Weight Guitar </h2>
+
+                                </div>
+
+                            </div>
+                            
+                            <!-- Item 3 -->
+                            <div class="carousel-item">
+                                <img class="slide-picture" src="images/feature3.png">
+                                <div class="carousel-caption">
+                                    <h2> LED on the Fretboard </h2>
+
+                                </div>
+
+                            </div>
+
+                        <!-- Component 2 Controllers -->
+                            <!-- Left button -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+                            <!-- Right button -->
+                            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                        <!-- Component 3 indicators -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active">
+
+                                </button>
+
+                                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1">
+
+                                </button>
+
+                                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2">
+
+                                </button>
+
+                            </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- IA6 -->
+        <div class="container-customer text-center" id="testimonials">
+            <div class="row">
+                <h2> Customer Testimonials  </h2>
+                <!-- Navigation Bar -->
+                <nav>
+                    <div class="nav nav-tabs nav-justified">
+                        <!-- Button 1 -->
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#menu1">
+                                Carl Wheezer
+                            </button>
+
+                        <!-- Button 2 -->
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu2">
+                                Mr. Guy
+                            </button>
+
+                        <!-- Button 3 -->
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu3">
+                                Morgan Freeman
+                            </button>
+
+                    </div>
+
+                </nav>
+
+                <!-- Content -->
+                <div class="tab-content">
+                    <!-- Costomer 1 -->
+                        <div class="tab-pane fade show active" id="menu1">
+                            <h3> Carl Wheezeer  </h3>
+                            <img class="customer" src="images/customer1.jpg">
+                            <p> Its such a goooood guitar, it helps me play my song covers  </p>
+
+                        </div>
+
+                    <!-- Costomer 2 -->
+                    <div class="tab-pane fade show" id="menu2">
+                        <h3> Mr. Guy  </h3>
+                        <img class="customer" src="images/customer2.jpg">
+                        <p> This really helped me learn guitar  </p>
+
+                    </div>
+
+                    <!-- Costomer 3 -->
+                    <div class="tab-pane fade show" id="menu3">
+                        <h3> Morgan Freeman  </h3>
+                        <img class="customer" src="images/customer3.jpg">
+                        <p> This guitar is just emaculate... so devine  </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- IA7 -->
+        <!-- Part Order Button 1 -->
+        <div class="container-order text-center" id="order">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img class="order" src="images/GuitarA7.jpg">
+                    <h2> JS Tech Smart Guitar  </h2>
+                    <p> Intrested in buying?  </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#link">Pre-Order  </button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Part 2 Popup Window -->
+        <div class="modal fade" id="link">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h3> Pre-order Form  </h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                    </div>
+
+                    <!-- Body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label> Smart Guitar: $399  </label>
+                            <input type="number" class="form-control" placeholder="Quantity...">
+
+                            <label> Email  </label>
+                            <input type="email" class="form-control" placeholder="Email...">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"> Pay  </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- IA8 -->
+        <div class=" container-contact text-center" id="contact">
+            <div class="row">
+                <h2> Contact Us </h2>
+                <!-- Left Col -->
+                <div class="col-sm-4">
+                    <h3> Contact Information </h3>
+                    <p> Email: JSTech@gmail.com </p>
+                    <p> Phone: (111)111-1111 </p>
+                    <p> Adress: 1000 E. Victoria Carson 90747 </p>
+
+                </div>
+
+                <!-- Righ Col -->
+                <div class="col-sm-8">
+                    <!-- Row1 -->
+                    <div class="row">
+                        <!-- Left Input Box -->
+                        <div class="col-sm-6">
+                            <input class="form-control" placeholder="Name">
+
+                        </div>
+                        <!-- Right Input Box -->
+                        <div class="col-sm-6">
+                            <input class="form-control" placeholder="Email">
+
+                        </div>
+
+                    </div>
+                    <!-- Row2 -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea class="form-control" placeholder="Comment" row="5"></textarea>
+
+
+                        </div>
+
+                    </div>
+                    <button class="btn-primary" type="submit"> Submit </button>
+
+                </div>
+
+            </div>
+                
+        </div>
+        <!-- id="contact" needed for nav bar after text center-->
+        <div class="container-contact2 text-left" >
+            <div class="row">
+                <h2> Resources </h2>
+                <div class="col-sm-4 text-cenetr" >
+                    <p align="left" > Store Hourse: </p>
+                    <p align="left"> Monday: 10:00 am to 9:00 pm </p>
+                    <p align="left"> Tuesday: 10:00 am to 9:00 pm </p>
+                    <p align="left"> Wednesday: 10:00 am to 9:00 pm </p>
+                    <p align="left"> Thrusday: 10:00 am to 9:00 pm </p>
+                    <p align="left"> Friday: 10:00 am to 5:00 pm </p>
+                    
+                </div>
+                <div class="col-sm-4 text-center" >
+                    <p align="left" > Social Media</p>
+                    <p align="left"> Instagram: @jstech </p>
+                    <p align="left"> Facebook: jstech </p>
+                    <p align="left"> Twitter: realjstech </p>
+                    
+                </div>
+                <div class="col-sm-4 text-center" >
+                    <p align="left" > FAQs </p>
+                    <p align="left"> Careers </p>
+                    <p align="left"> Privacy notice </p>
+                    
+                </div>
+                
+
+            </div>
+            
+            
+        </div>
+        
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          // Initialize Tooltip
+          $('[data-toggle="tooltip"]').tooltip();
+         
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#header']").on('click', function(event) {
+         
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+         
+              // Prevent default anchor click behavior
+              event.preventDefault();
+         
+              // Store hash
+              var hash = this.hash;
+         
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function(){
+          
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        })
+        </script>
+
+</html>

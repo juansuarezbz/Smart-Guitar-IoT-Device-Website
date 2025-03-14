@@ -1,0 +1,123 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        
+        <title> IA7 Order  </title>
+        <!-- CSS -->
+        <style>
+            .order{
+                width: 150px;
+                height: 300px;
+                border-radius: 50%;
+                border: solid 5px brown;
+
+            }
+            .container-order{
+                padding: 40px;
+                background-color: aquamarine;
+
+            }
+            .container-order h2{
+                font-size: 40px;
+                color: dimgray;
+                font-weight: bolder;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            }
+            .container-order p{
+                font-size: 28px;
+                color: cadetblue;
+                font-weight: bold;
+
+            }
+            .container-order button{
+                font-size: 20px;
+                color: darkgreen;
+                background-color: burlywood;
+                
+            }
+            .modal-content{
+                background-color: darkseagreen;
+                font-size: 25px;
+                color: black;
+                width: 600px;
+            }
+            .modal-dialog{
+                width: 600px;
+            }
+            .modal-footer button{
+                color: aliceblue;
+                font-size: 30px;
+                font-weight: bold;
+                background-color:darkslateblue;
+                width: 100%;
+            }
+            
+            
+
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Part Order Button 1 -->
+        <div class="container-order text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img class="order" src="images/GuitarA7.jpg">
+                    <h2> JS Tech Smart Guitar  </h2>
+                    <p> Intrested in buying?  </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#link">Pre-Order  </button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Part 2 Popup Window -->
+        <div class="modal fade" id="link">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h3> Pre-order Form  </h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                    </div>
+
+                    <!-- Body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label> Smart Guitar: $399  </label>
+                            <input type="number" class="form-control" placeholder="Quantity...">
+
+                            <label> Email  </label>
+                            <input type="email" class="form-control" placeholder="Email...">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"> Pay  </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>
